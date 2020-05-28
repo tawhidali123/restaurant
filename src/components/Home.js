@@ -1,6 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
+export default function Home(props) {
+    return (
+        <Container>
+            <div className='wrapper'>
+                <div className='title'>
+                    <h1>Restaurant name</h1>
+                </div>
+
+                <div className='buttons'>
+                    <button>Menu</button>
+                    <br />
+                    <button>Order Online</button>
+                    <br />
+                    <button>Phone Number</button>
+                </div>
+            </div>  
+        </Container>
+    )
+}
+
 const Container = styled.div`
     .wrapper {
         height: 100vh;
@@ -23,32 +44,15 @@ const Container = styled.div`
         height: 5vh;
         width: 20vw;
         margin: 1vh;
+        transition: transform 500ms;
+    }
+
+    button:hover {
+        transform: scale(1.5);
     }
     
     
 `;
-
-
-
-export default function Home(props) {
-    return (
-        <Container>
-            <div className='wrapper'>
-                <div className='title'>
-                    <h1>Restaurant name</h1>
-                </div>
-
-                <div className='buttons'>
-                    <button>Menu</button>
-                    <br />
-                    <button>Order Online</button>
-                    <br />
-                    <button>Phone Number</button>
-                </div>
-            </div>  
-        </Container>
-    )
-}
 
 
 
