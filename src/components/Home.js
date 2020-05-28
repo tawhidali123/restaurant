@@ -50,6 +50,7 @@ const Container = styled.div`
         height: 5vh;
         width: 20vw;
         margin: 1vh;
+        border-radius: 15px;
         transition: transform 500ms;
     }
 
