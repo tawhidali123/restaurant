@@ -1,11 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import video from '../videos/light.mp4'
 
 
 export default function Home(props) {
     return (
         <Container>
-            <div className='wrapper'>
+            <div className='wrapper'> 
+
+                <video autoPlay loop muted>
+                    <source src={video} type='video/mp4' />
+                </video>
+
                 <div className='title'>
                     <h1>Restaurant name</h1>
                 </div>
@@ -49,6 +55,19 @@ const Container = styled.div`
 
     button:hover {
         transform: scale(1.5);
+    }
+
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
     }
     
     
