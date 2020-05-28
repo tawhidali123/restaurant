@@ -1,5 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
+import video from '../videos/light.mp4'
+
+
+export default function Home(props) {
+    return (
+        <Container>
+            <div className='wrapper'> 
+
+                <video autoPlay loop muted>
+                    <source src={video} type='video/mp4' />
+                </video>
+
+                <div className='title'>
+                    <h1>Restaurant name</h1>
+                </div>
+
+                <div className='buttons'>
+                    <button>Menu</button>
+                    <br />
+                    <button>Order Online</button>
+                    <br />
+                    <button>Phone Number</button>
+                </div>
+            </div>  
+        </Container>
+    )
+}
 
 const Container = styled.div`
     .wrapper {
@@ -23,32 +50,29 @@ const Container = styled.div`
         height: 5vh;
         width: 20vw;
         margin: 1vh;
+        border-radius: 15px;
+        transition: transform 500ms;
+    }
+
+    button:hover {
+        transform: scale(1.5);
+    }
+
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
     }
     
     
 `;
-
-
-
-export default function Home(props) {
-    return (
-        <Container>
-            <div className='wrapper'>
-                <div className='title'>
-                    <h1>Restaurant name</h1>
-                </div>
-
-                <div className='buttons'>
-                    <button>Menu</button>
-                    <br />
-                    <button>Order Online</button>
-                    <br />
-                    <button>Phone Number</button>
-                </div>
-            </div>  
-        </Container>
-    )
-}
 
 
 
