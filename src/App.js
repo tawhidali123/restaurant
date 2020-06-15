@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route path="/home" render={(routerProps) => <Home routerProps={routerProps}/>}/>
+        <Route path="/home" render={ (routerProps) => <Home routerProps={routerProps}/> }/>
         <Menu />
       </Switch>
     </div>

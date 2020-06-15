@@ -31,16 +31,16 @@ export default function MenuItem() {
     return (
         <Container>
             <div className='menuList'>
-                    <div className='description'>
-                        <h4>chicken</h4>
-                        <p>description</p>
-                    </div>
+                <div className='description'>
+                    <h4>chicken</h4>
+                    <p>description</p>
+                </div>
 
-                    <div className='imgContainer'>
-                        <div className='picture'>
-                            <img  className='image' src='https://40aprons.com/wp-content/uploads/2019/12/paleo-gluten-free-chicken-piccata-9.jpg' />
-                        </div>
+                <div className='imgContainer'>
+                    <div className='picture'>
+                        <img  className='image' src='https://40aprons.com/wp-content/uploads/2019/12/paleo-gluten-free-chicken-piccata-9.jpg' />
                     </div>
+                </div>
             </div>
         </Container>
     )
