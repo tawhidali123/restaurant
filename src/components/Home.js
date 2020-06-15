@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import video from '../videos/light.mp4'
+import { Link } from 'react-router-dom'
+import Navigation from './Navigation'
 
 
 export default function Home(props) {
     return (
         <Container>
             <div className='wrapper'> 
+
+            <Navigation />
 
                 <video autoPlay loop muted>
                     <source src={video} type='video/mp4' />
@@ -17,7 +21,9 @@ export default function Home(props) {
                 </div>
 
                 <div className='buttons'>
-                    <button>Menu</button>
+                    <Link to='/menu'>
+                        <button>Menu</button>
+                    </Link>
                     <br />
                     <button>Order Online</button>
                     <br />
