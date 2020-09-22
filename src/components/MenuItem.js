@@ -12,7 +12,7 @@ const Container = styled.div`
     }
     
     .description{
-        border: 25px solid black;
+        border: 4px solid black;
         grid-column: 1 / 3;
         text-align: center;
     }
@@ -24,12 +24,13 @@ const Container = styled.div`
     .image{
         height: 75vh;
         width: 65vh;
+        
     }
 `
 
-export default function MenuItem() {
+export default function MenuItem(props) {
     return (
-        <Container>
+        <Container style={{ 'z-index': `-${props.z}`, 'transform': `translateX(-${ 6 * props.z }px)`, 'transform': `translateY(-${ 6 * props.z }px)` }}>
             <div className='menuList'>
                 <div className='description'>
                     <h4>chicken</h4>
@@ -38,7 +39,7 @@ export default function MenuItem() {
 
                 <div className='imgContainer'>
                     <div className='picture'>
-                        <img  className='image' src='https://40aprons.com/wp-content/uploads/2019/12/paleo-gluten-free-chicken-piccata-9.jpg' />
+                        <img alt='' className='image' src='https://40aprons.com/wp-content/uploads/2019/12/paleo-gluten-free-chicken-piccata-9.jpg' />
                     </div>
                 </div>
             </div>

@@ -20,7 +20,7 @@ const Container = styled.div`
     }
     
     .description{
-        border: 25px solid black;
+        border: 4px solid black;
         grid-column: 1 / 3;
         text-align: center;
     }
@@ -43,8 +43,8 @@ export default function Menu(props) {
                     <h2>Menu</h2>
                 </div>
 
-                <MenuItem />
-                <MenuItem />
+                <MenuItem z={ 1 } />
+                <MenuItem z={ 2 } />
             </div>
         </Container>
     )
